@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<title>Contact us Page</title>
+    <style>
+        * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+/* Header styles */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	height: 4rem;
+}
+
+.logo {
+	font-size: 2rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 20px;
+}
+nav ul li{ 
+    display: inline;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+/* banner section styles */
+.banner {
+	text-align: center;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+
+/* Contact form styles */
+.contact-form {
+	padding: 40px 0;
+	margin: 0 10px;
+}
+
+.form-container {
+	max-width: 40%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-container label {
+	display:block;
+	font-weight: bold;
+}
+.form-container input, textarea{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	resize: vertical;
+}
+.submit-button {
+	padding: 10px 20px;
+	background-color: #000000;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+/* Contact info styles */
+.contact-info {
+	text-align: center;
+	padding: 50px 0;
+	background-color: #f7f7f7;
+}
+
+.contact-info h2 {
+	margin-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+	.logo {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	#nav-menu {
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		background-color: #333;
+		width: 100%;
+		display: none;
+	}
+
+	#nav-menu.active {
+		display: block;
+		flex-direction: row;
+		padding: 1rem;
+	}
+}
+    </style>
+</head>
+    
+<body>
+	<!-- Header section -->
+    <nav>
+        <div class="logo"><img width="120px" src="/imges/LOGG! (1).PNG" alt=""></div>
+        <ul>
+            <li><a href="index.html">shop</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Cart</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+	<!-- banner section -->
+	<section class="banner">
+		<h1>Get in Touch With Us</h1>
+		<p>We're here to answer any questions you may have.</p>
+	</section>
+
+	<!-- Contact form -->
+	<section class="contact-form">
+		<div class="form-container">
+			<h2>Your Details</h2>
+			<form action="#" method="POST">
+
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="name" required>
+             
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" required>
+                   
+				<label for="phone">Phone: </label>
+				<input type="tel" id="phone" name="phone">
+              
+				<label for="message">Message: </label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+                
+				<button type="submit" class="submit-button">Submit</button>
+			</form>
+		</div>
+	</section>
+
+    <footer>
+        <div class="marquee">
+            <div class="track">
+                <div class="content">&nbsp;
+                    "Step into Style, Stride with Confidence.""Step into Style, Stride with Confidence.""Step into
+                    Style, Stride with Confidence."</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 footer-logo">
+                <img src="/imges/LOGG! (1).PNG" alt="Your Logo">
+            </div>
+            <div class="col-md-3 footer-text">
+                <p>Explore the World at Your Feet</p>
+                <p>Shop Now for the Latest Styles</p>
+                <p><strong>Beat-X</strong> - Where Fashion Meets Comfort</p>
+            </div>
+            <div class="col-md-3 footer-social">
+                <p>Connect With Us:</p>
+                <!-- Add your social media icons or links here -->
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="col-md-3 footer-contact">
+                <p>Customer Service: BeatX@Email.com</p>
+                <p>Sign up for Exclusive Offers and Updates</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 footer-copyright">
+                <p>© 2023 Beat-X. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+	<script src="script.js">
+        // JavaScript function to toggle the navigation menu
+function openNavbar() {
+	const navMenu = document.getElementById("nav-menu");
+	navMenu.classList.toggle("active");
+}
+    </script>
+</body>
+
+
+</html>
